@@ -113,15 +113,20 @@ else
   fi
 fi
 
-alias l='ls -1A'         # Lists in one column, hidden files.
 alias ll='ls -lh'        # Lists human readable sizes.
+alias l='ll'         # Lists in one column, hidden files.
 alias lr='ll -R'         # Lists human readable sizes, recursively.
-alias la='ll -A'         # Lists human readable sizes, hidden files.
+alias la='ls -lhA'       # Lists human readable sizes, hidden files, reverse
+alias latr='ls -lrhA'    # Lists human readable sizes, hidden files.
 alias lm='la | "$PAGER"' # Lists human readable sizes, hidden files through pager.
-alias lk='ll -Sr'        # Lists sorted by size, largest last.
-alias lt='ll -tr'        # Lists sorted by date, most recent last.
-alias lc='lt -c'         # Lists sorted by date, most recent last, shows change time.
-alias lu='lt -u'         # Lists sorted by date, most recent last, shows access time.
+alias lk='ll -S'         # Lists sorted by size, largest first.
+alias lkr='ll -Sr'       # Lists sorted by size, largest last.
+alias lt='ll -t'         # Lists sorted by date, most recent first.
+alias ltr='ll -tr'       # Lists sorted by date, most recent last.
+alias lc='lt -c'         # Lists sorted by date, most recent first, shows change time.
+alias lcr='ltr -c'       # Lists sorted by date, most recent last, shows change time.
+alias lu='lt -u'         # Lists sorted by date, most recent first, shows access time.
+alias lur='ltr -u'       # Lists sorted by date, most recent last, shows access time.
 
 if [[ ${(@M)${(f)"$(ls --version 2>&1)"}:#*GNU *} ]]; then
   alias lx='ll -XB'      # Lists sorted by extension (GNU only).
