@@ -114,7 +114,7 @@ else
 fi
 
 alias ll='ls -lh'        # Lists human readable sizes.
-alias l='ll'         # Lists in one column, hidden files.
+alias l='ll'             # Lists in one column, hidden files.
 alias lr='ll -R'         # Lists human readable sizes, recursively.
 alias la='ls -lhA'       # Lists human readable sizes, hidden files, reverse
 alias latr='ls -lrhA'    # Lists human readable sizes, hidden files.
@@ -127,6 +127,7 @@ alias lc='lt -c'         # Lists sorted by date, most recent first, shows change
 alias lcr='ltr -c'       # Lists sorted by date, most recent last, shows change time.
 alias lu='lt -u'         # Lists sorted by date, most recent first, shows access time.
 alias lur='ltr -u'       # Lists sorted by date, most recent last, shows access time.
+alias md='mkdir'         # Create directory
 
 if [[ ${(@M)${(f)"$(ls --version 2>&1)"}:#*GNU *} ]]; then
   alias lx='ll -XB'      # Lists sorted by extension (GNU only).
