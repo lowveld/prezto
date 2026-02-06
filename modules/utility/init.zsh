@@ -36,7 +36,7 @@ alias man='nocorrect man'
 alias mkdir='nocorrect mkdir'
 alias mv='nocorrect mv'
 alias mysql='nocorrect mysql'
-alias rm='nocorrect rm'
+#alias rm='nocorrect rm'
 
 # Disable globbing.
 alias bower='noglob bower'
@@ -128,6 +128,8 @@ alias lcr='ltr -c'       # Lists sorted by date, most recent last, shows change 
 alias lu='lt -u'         # Lists sorted by date, most recent first, shows access time.
 alias lur='ltr -u'       # Lists sorted by date, most recent last, shows access time.
 alias md='mkdir'         # Create directory
+#cmdline access to sublime text
+alias st="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
 if [[ ${(@M)${(f)"$(ls --version 2>&1)"}:#*GNU *} ]]; then
   alias lx='ll -XB'      # Lists sorted by extension (GNU only).
